@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4895D3991CFE2791005C59E0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4895D3981CFE2791005C59E0 /* main.cpp */; };
+		48B14E931D04D7D600D083F1 /* dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48B14E911D04D7D600D083F1 /* dijkstra.cpp */; };
+		48B14E961D04DA1D00D083F1 /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48B14E941D04DA1D00D083F1 /* graph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,12 @@
 /* Begin PBXFileReference section */
 		4895D3951CFE2791005C59E0 /* domicilios */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = domicilios; sourceTree = BUILT_PRODUCTS_DIR; };
 		4895D3981CFE2791005C59E0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		48B14E7A1D03BB7800D083F1 /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		48B14E8F1D04C2CB00D083F1 /* medellin_arcos.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = medellin_arcos.txt; sourceTree = "<group>"; };
+		48B14E911D04D7D600D083F1 /* dijkstra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dijkstra.cpp; sourceTree = "<group>"; };
+		48B14E921D04D7D600D083F1 /* dijkstra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dijkstra.h; sourceTree = "<group>"; };
+		48B14E941D04DA1D00D083F1 /* graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graph.cpp; sourceTree = "<group>"; };
+		48B14E951D04DA1D00D083F1 /* graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,12 @@
 			isa = PBXGroup;
 			children = (
 				4895D3981CFE2791005C59E0 /* main.cpp */,
+				48B14E951D04DA1D00D083F1 /* graph.h */,
+				48B14E941D04DA1D00D083F1 /* graph.cpp */,
+				48B14E921D04D7D600D083F1 /* dijkstra.h */,
+				48B14E911D04D7D600D083F1 /* dijkstra.cpp */,
+				48B14E7A1D03BB7800D083F1 /* test.txt */,
+				48B14E8F1D04C2CB00D083F1 /* medellin_arcos.txt */,
 			);
 			path = domicilios;
 			sourceTree = "<group>";
@@ -118,7 +132,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B14E961D04DA1D00D083F1 /* graph.cpp in Sources */,
 				4895D3991CFE2791005C59E0 /* main.cpp in Sources */,
+				48B14E931D04D7D600D083F1 /* dijkstra.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +255,7 @@
 				4895D39E1CFE2791005C59E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
