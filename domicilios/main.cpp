@@ -48,10 +48,14 @@ int main(){
     vector<int> min_distance;
     vector<int> previous;
     
+    //el cero que se pasa en esta funcion es el origen
     DijkstraComputePaths(0, adjacency_list, min_distance, previous);
-    cout << "Distance from 0 to 4: " << min_distance[1] << endl;
     
-    list<int> path = DijkstraGetShortestPathTo(1, previous);
+    //el 4 que se usa en min_distance[4] es el destino
+    cout << "Distance from 0 to 4: " << min_distance[4] << endl;
+    
+    //aqui tambien el 4 es el destino
+    list<int> path = DijkstraGetShortestPathTo(4, previous);
     cout << "Path : ";
     copy(path.begin(), path.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
