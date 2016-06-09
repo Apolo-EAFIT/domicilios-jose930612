@@ -143,7 +143,7 @@ int main(){
             cout << endl;
             
         }
-        cout<<endl;
+        cout<<endl<<"--------------------------------------------"<<endl<<endl;
     }
     
     return 0;
