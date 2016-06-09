@@ -1,6 +1,7 @@
 #include <fstream>
 #include <string>
-
+#include <sstream>
+#include <iostream>
 #include "graph.h"
 
 using namespace std;
@@ -29,6 +30,18 @@ int edgesSize (){
     count.close();
     
     return size-1;
+}
+
+int sizeRuta(istringstream &line){
+    int size=0;
+    string aux;
+    while(getline (line, aux, ' ')){
+        //cout<<aux<<"\t";
+        ++size;
+        
+    };
+    //cout<<"size= "<<size<<endl;
+    return size;
 }
 
 Edge nodos (string line){

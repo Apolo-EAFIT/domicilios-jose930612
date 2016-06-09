@@ -1,5 +1,6 @@
 #pragma once
 #include <stdio.h>
+#include <sstream>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ struct Edge{
     int weight;
 };
 
-
 int archsSize ();
 int edgesSize ();
+int sizeRuta(istringstream &line);
 Edge nodos (string line);
