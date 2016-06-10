@@ -51,7 +51,7 @@ int main(){
     arcos.close();
     
     cont = 0;
-    fstream domicilios("test.txt", ios::in);
+    fstream domicilios("domicilios.txt", ios::in);
     while (getline (domicilios,line, '\n')) {
         
         

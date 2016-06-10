@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		4895D3951CFE2791005C59E0 /* domicilios */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = domicilios; sourceTree = BUILT_PRODUCTS_DIR; };
 		4895D3981CFE2791005C59E0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		48B14E7A1D03BB7800D083F1 /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		48B14E7A1D03BB7800D083F1 /* domicilios.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = domicilios.txt; sourceTree = "<group>"; };
 		48B14E8F1D04C2CB00D083F1 /* medellin_arcos.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = medellin_arcos.txt; sourceTree = "<group>"; };
 		48B14E911D04D7D600D083F1 /* dijkstra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dijkstra.cpp; sourceTree = "<group>"; };
 		48B14E921D04D7D600D083F1 /* dijkstra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dijkstra.h; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				48B14E941D04DA1D00D083F1 /* graph.cpp */,
 				48B14E921D04D7D600D083F1 /* dijkstra.h */,
 				48B14E911D04D7D600D083F1 /* dijkstra.cpp */,
-				48B14E7A1D03BB7800D083F1 /* test.txt */,
+				48B14E7A1D03BB7800D083F1 /* domicilios.txt */,
 				48B14E8F1D04C2CB00D083F1 /* medellin_arcos.txt */,
 			);
 			path = domicilios;
