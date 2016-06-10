@@ -36,6 +36,7 @@ int main(){
     int **ruta, **rutaOptima;
     int *inicio;
     int rutaMenor = 99999;
+    int tamRuta = 0;
     
     adjacency_list_t adjacency_list(E);
     
@@ -68,8 +69,8 @@ int main(){
             int contAux = 0;
             istringstream iss(line);
             string aux;
-            
-            ruta[cont-1] = new int[sizeRuta(iss)];
+            tamRuta = sizeRuta(iss);
+            ruta[cont-1] = new int[tamRuta];
             rutaOptima[cont-1] = new int[sizeRuta(iss)];
             istringstream set(line);
             while(getline (set, aux, ' ')){
@@ -95,30 +96,32 @@ int main(){
             if (ruta[j][0] == inicio[j]) {
                 int weightRuta = 0;
                 
-                for (int i=1; i<=sizeof(ruta[j])/sizeof(int); ++i) {
+                for (int i=1; i<tamRuta; ++i) {
                     DijkstraComputePaths(ruta[j][i-1], adjacency_list, min_distance, previous);
                     weightRuta += min_distance[ruta[0][i]];
                 }
-                for (int i=(sizeof(ruta[j])/sizeof(int))-1; i>=0; --i) {
+                for (int i=tamRuta-2; i>=0; --i) {
                     DijkstraComputePaths(ruta[j][i+1], adjacency_list, min_distance, previous);
                     weightRuta += min_distance[ruta[j][i]];
                 }
                 
                 if (weightRuta <= rutaMenor) {
                     rutaMenor = weightRuta;
-                    for (int i=0; i<=sizeof(ruta[j])/sizeof(int); ++i) {
+                    for (int i=0; i<tamRuta; ++i) {
                         rutaOptima[j][i] = ruta[j][i];
                     }
                 }
                 
             }
+            
+            //cout <<"size of ruta [0] = "<<sizeof(ruta[0])/sizeof(int)<<endl;
         } while ( next_permutation(ruta[j],ruta[j]+3) );
         
-        for (int i=0; i<=sizeof(rutaOptima[j])/sizeof(int); ++i) {
+        for (int i=0; i<tamRuta; ++i) {
             cout<<rutaOptima[j][i]<<"\t";
         }
         cout<<endl<<"Distancia recorrida total = "<<rutaMenor<<endl<<endl;
-        for (int i=1; i<=sizeof(rutaOptima[j])/sizeof(int); ++i) {
+        for (int i=1; i<tamRuta; ++i) {
             
             DijkstraComputePaths(rutaOptima[j][i-1], adjacency_list, min_distance, previous);
             
@@ -131,7 +134,7 @@ int main(){
             cout << endl;
             
         }
-        for (int i=(sizeof(ruta[j])/sizeof(int))-1; i>=0; --i) {
+        for (int i=tamRuta-2; i>=0; --i) {
             DijkstraComputePaths(rutaOptima[j][i+1], adjacency_list, min_distance, previous);
             
             //el 4 que se usa en min_distance[4] es el destino
